@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% load static %}
+{% block titulo %}Home{% endblock %}
+
+{% block css_extra %}
+  <link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock %}
+
+
+{% block main %}
+<section class="hero">
+  <h1>Bem-vindo ao Site FatecTech
+    !</h1>
+  <p>Conheça nossos produtos e serviços de alta qualidade.</p>
+  <a href="{% url 'addUsuario' %}" class="btn-cadastro">Cadastre-se</a>
+</section>
+
+<div class="produto-container">
+  {% for produto in produtos_api %}
+    <div class="produto-card">
+      <img src="{{ produto.image }}" alt="{{ produto.title }}">
+      <div class="produto-info">
+        <h3>{{ produto.title }}</h3>
+        <p>{{ produto.description|truncatechars:100 }}</p>
+        <p class="preco">${{ produto.price }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

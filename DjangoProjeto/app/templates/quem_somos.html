@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% load static %}
+{% block titulo %}
+  Quem Somos
+{% endblock %}
+
+{% block css_extra %}
+  <link rel="stylesheet" href="{% static 'quem_somos.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+  <section class="quem-somos-container">
+    <h1>Quem Somos</h1>
+    <p>Somos uma empresa dedicada a oferecer os melhores produtos e serviços.</p>
+    <p>Nossa missão é atender com excelência e inovação.</p>
+
+    <div class="perfil-autor">
+      <h2>Sobre o Criador</h2>
+      <p>Meu nome é Otho Oliver Ribeiro, tenho 19 anos. Técnico em informática para Internet pela Etec Praia Grande. <br>
+         Atualmente sou estudante da FATEC de Praia Grande, cursando <strong>DSM - Desenvolvimento de Software Multiplataforma</strong>. <br>
+         Estou constantemente aprendendo e aplicando novas tecnologias para criar soluções reais e impactantes.</p>
+    </div>
+
+    <h2>Contato</h2>
+    <ul class="contato-lista">
+      <li><strong>Email:</strong> otho.01@hotmail.com</li>
+      <li><strong>Telefone:</strong> (13) 97408-6060</li>
+      <li><strong>Instagram:</strong> <a href="https://instagram.com/othooliver" target="_blank">@Othooliver</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/otho-oliver-866823319" target="_blank">Otho Oliver</a></li>
+      <li><strong>Facebook:</strong> <a href="https://facebook.com/othooliver" target="_blank">Otho Oliver</a></li>
+    </ul>
+  </section>
+{% endblock %}

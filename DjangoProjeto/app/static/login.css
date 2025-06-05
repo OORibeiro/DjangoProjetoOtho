@@ -1,0 +1,112 @@
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f5faff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="email"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-container input[type="submit"] {
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #007acc;
+}
+
+.login-container p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-container form p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.login-container label {
+  width: 80px; /* largura fixa para alinhar os labels */
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container input[type="email"] {
+  flex: 1; /* ocupa o restante do espaço */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-container input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.login-container input[type="submit"] {
+  padding: 10px 30px;  /* largura controlada pelo padding */
+  max-width: 150px;    /* limita o tamanho máximo do botão */
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 15px;
+  margin-top: 10px;
+  width: 100%; /* pra respeitar o max-width */
+  box-sizing: border-box;
+}
+
+.login-container input[type="submit"] {
+  padding: 10px 30px;
+  max-width: 150px;
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 15px;
+  margin: 10px auto 0 auto; /* centraliza horizontalmente */
+  width: 100%;
+  box-sizing: border-box;
+  display: block; /* necessário para que margin auto funcione */
+}

@@ -1,0 +1,52 @@
+.quem-somos-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f7fbff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 50, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.quem-somos-container h1 {
+  font-size: 2.2rem;
+  color: #1a4c8f;
+  margin-bottom: 1rem;
+}
+
+.perfil-autor {
+  background-color: #e0f0ff;
+  border-left: 5px solid #1a4c8f;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+}
+
+.perfil-autor h2 {
+  color: #14507a;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-autor p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contato-lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.contato-lista li {
+  margin: 0.5rem 0;
+}
+
+.contato-lista a {
+  color: #1a4c8f;
+  text-decoration: none;
+}
+
+.contato-lista a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,101 @@
+form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #3399ff;
+  outline: none;
+}
+
+.btn, .btn-cancelar {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.btn {
+  background-color: #3399ff;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #267acc;
+}
+
+.btn-cancelar {
+  background-color: #ccc;
+  color: #333;
+  margin-left: 10px;
+}
+
+.btn-cancelar:hover {
+  background-color: #999;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn, .btn-cancelar {
+  display: inline-block;
+  width: 120px; /* tamanho fixo igual para os dois */
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-cancelar {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  text-decoration: none; /* se for link */
+  line-height: normal;
+}

@@ -1,0 +1,75 @@
+{% extends 'template.html' %}
+{% load static %}
+
+{% block css_extra %}
+  <link rel="stylesheet" href="{% static 'checkout.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<div class="checkout-container">
+  <h1>Finalizar Compra</h1>
+
+  <div class="produto-info">
+    <h2>{{ produto.nome }}</h2>
+    <img src="{{ produto.foto.url }}" alt="{{ produto.nome }}">
+    <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+  </div>
+
+  <div class="usuario-info">
+    <h3>Comprador: {{ usuario.nome }}</h3>
+  </div>
+
+  <form method="post" class="checkout-form">
+    {% csrf_token %}
+    
+    <label for="numero_cartao">Número do Cartão</label>
+    <input type="text" name="numero_cartao" id="numero_cartao" required>
+
+    <label for="validade">Validade</label>
+    <input type="text" name="validade" id="validade" placeholder="MM/AA" required>
+
+    <label for="cvv">CVV</label>
+    <input type="text" name="cvv" id="cvv" required>
+
+    <button type="submit" class="btn-finalizar">Finalizar Compra</button>
+  </form>
+</div>
+
+<script>
+document.querySelector('form').addEventListener('submit', function (e) {
+  const numero = document.querySelector('input[name="numero_cartao"]').value.trim();
+  const validade = document.querySelector('input[name="validade"]').value.trim();
+  const cvv = document.querySelector('input[name="cvv"]').value.trim();
+
+  const numeroRegex = /^\d{16}$/;
+  const validadeRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+  const cvvRegex = /^\d{3}$/;
+
+  if (!numeroRegex.test(numero)) {
+    alert("Número do cartão inválido. Use 16 dígitos.");
+    e.preventDefault();
+    return;
+  }
+
+  if (!validadeRegex.test(validade)) {
+    alert("Data de validade inválida. Use o formato MM/AA.");
+    e.preventDefault();
+    return;
+  }
+
+  if (!cvvRegex.test(cvv)) {
+    alert("CVV inválido. Use 3 dígitos.");
+    e.preventDefault();
+    return;
+  }
+
+  const [mes, ano] = validade.split('/');
+  const hoje = new Date();
+  const dataValidade = new Date(`20${ano}`, mes);
+  if (dataValidade < hoje) {
+    alert("O cartão está vencido.");
+    e.preventDefault();
+  }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block conteudo %}
+  <div class="container mt-5 text-center">
+  <h3 style="text-align: center; margin-left: 70px;" class="text-primary">Produtos Vendidos</h3><br>
+  <img src="{{ grafico_vendas }}" alt="Gráfico de Vendas"
+     style="display: block; margin: 0 auto;" 
+     class="img-fluid rounded shadow">
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% load static %}
+{% block titulo %}Home{% endblock %}
+
+{% block css_extra %}
+  <link rel="stylesheet" href="{% static 'form.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+<h1 style="text-align: center;">{{ titulo }}</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn">Salvar</button>
+  <a href="{% url 'listar_produtos' %}" class="btn btn-cancelar">Cancelar</a>
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% load static %}
+{% block titulo %}usuarios{% endblock %}
+
+{% block css_extra %}
+  <link rel="stylesheet" href="{% static 'usuarios.css' %}">
+{% endblock %}
+
+
+{% block conteudo %}
+
+<h1 class="titulo-centralizado">Usuários</h1>
+
+
+  <table border="1">
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      {% if request.session.is_admin %}
+      <th colspan="2">Ações</th>
+      {% endif %}
+    </tr>
+    {% for user in ListUsuarios %}
+    <tr>
+      <td>{{ user.nome }}</td>
+      <td>{{ user.email }}</td>
+      {% if request.session.is_admin %}
+      <td><a href="{% url 'excluirUsuario' user.id %}">Excluir</a></td>
+      <td><a href="{% url 'editarUsuario' user.id %}">Editar</a></td>
+      {% endif %}
+    </tr>
+    {% endfor %}
+  </table>
+
+{% endblock %}
