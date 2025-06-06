@@ -56,7 +56,7 @@ http://127.0.0.1:8000/
 
 obs:
 
-Caso queira ter acesso de adm para excluir outros usuários vá nas linhas 61, 93, e mude o e-mail dessas linhas e cadastre um usuário com esse novo e-mail.
+Caso queira ter acesso de adm para excluir outros usuários vá nas linhas 61, 93 do views, e mude o e-mail dessas linhas e cadastre um usuário com esse novo e-mail.
 
 
 #Ingles
@@ -112,5 +112,5 @@ http://127.0.0.1:8000/
 
 Note:
 
-If you want to have admin access to delete other users, go to lines 61, 93, and change the email on these lines and register a user with this new email.
+If you want to have admin access to delete other users, go to lines 61, 93, in views and change the email on these lines and register a user with this new email.
 
